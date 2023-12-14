@@ -1,7 +1,7 @@
 import { Input } from './SearchBar.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
-import { updateFilter } from 'redux/filterSlice';
+import { selectFilter } from 'redux/contacts/contactsSelectors';
+import { updateFilter } from 'redux/contacts/filterSlice';
 
 export const SearchBar = () => {
   const dispatch = useDispatch();

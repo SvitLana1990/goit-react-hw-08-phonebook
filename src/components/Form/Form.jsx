@@ -2,9 +2,9 @@ import { Formik } from 'formik';
 import { Form, ErrorMessage, Field, Button, Label } from './Form.styled';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/contactsSelectors';
 import { toast } from 'react-hot-toast';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/contactsOperations';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()

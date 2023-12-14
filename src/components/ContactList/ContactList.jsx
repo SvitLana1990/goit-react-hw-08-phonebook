@@ -1,9 +1,9 @@
 import { Item } from 'components/ContactItem/ContactItem';
 import { ContactList } from './ContactList.styled';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { selectFilteredContacts } from 'redux/selectors';
+import { selectFilteredContacts } from 'redux/contacts/contactsSelectors';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/contactsOperations';
 import { toast } from 'react-hot-toast';
 
 export const List = () => {
