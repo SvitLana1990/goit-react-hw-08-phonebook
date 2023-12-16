@@ -6,7 +6,7 @@ export const UserContainer = styled.div`
   gap: ${p => p.theme.spacing(3)};
 `;
 
-export const WelcomeUserText = styled.p`
+export const UserText = styled.p`
   font-size: 24px;
   font-weight: 600;
   color: ${p => p.theme.colors.white};
