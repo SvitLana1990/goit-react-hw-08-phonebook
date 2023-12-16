@@ -23,7 +23,7 @@ export default function Contacts() {
       </Helmet>
       <ContactForm />
       <SearchBar />
-      <div>{isLoading && <PhoneLoader />}</div>
+      {isLoading && <PhoneLoader />}
       <List />
     </>
   );

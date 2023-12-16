@@ -1,31 +1,15 @@
 import styled from 'styled-components';
-import {
-  Form as FormikForm,
-  ErrorMessage as FormikError,
-  Field as FormikField,
-} from 'formik';
 
-export const Form = styled(FormikForm)`
+export const Form = styled.form`
   width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${p => p.theme.spacing(3)};
+  margin: 0 auto;
+  padding: ${p => p.theme.spacing(3)} 0;
   border: 2px solid ${p => p.theme.colors.beige};
   border-radius: 12px;
-  padding: ${p => p.theme.spacing(3)} 0;
-  margin: 0 auto;
-  margin-bottom: ${p => p.theme.spacing(5)};
-`;
-
-export const ErrorMessage = styled(FormikError)`
-  color: ${p => p.theme.colors.red};
-`;
-
-export const Field = styled(FormikField)`
-  width: 250px;
-  border: 2px solid ${p => p.theme.colors.beige};
-  border-radius: 4px;
+  gap: ${p => p.theme.spacing(3)};
 `;
 
 export const Label = styled.label`
@@ -39,8 +23,14 @@ export const Label = styled.label`
   }
 `;
 
-export const Button = styled.button`
-  width: 150px;
+export const Field = styled.input`
+  width: 250px;
+  border: 2px solid ${p => p.theme.colors.beige};
+  border-radius: 4px;
+`;
+
+export const LogInButton = styled.button`
+  width: 250px;
   font-weight: 500;
   padding: ${p => p.theme.spacing(1)};
   background: ${p => p.theme.colors.beige};

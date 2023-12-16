@@ -27,14 +27,20 @@ export const ContactForm = () => {
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (isExist) {
-      toast.error(`Contact with the name ${name} already exists.`);
+      toast.error(`Contact with the name ${name} already exists.`, {
+        position: 'top-center',
+      });
       return;
     }
     try {
       await dispatch(addContact(values)).unwrap();
-      toast.success(`${values.name} added to your contacts`);
+      toast.success(`${values.name} added to your contacts`, {
+        position: 'top-center',
+      });
     } catch (error) {
-      toast.error('Ooops! Something went wrong. Try refreshing the page');
+      toast.error('Ooops! Something went wrong. Try refreshing the page', {
+        position: 'top-center',
+      });
     }
   };
 
@@ -53,13 +59,13 @@ export const ContactForm = () => {
       >
         <Form>
           <Label htmlFor="name">
-            NAME&nbsp;&nbsp;&nbsp;&nbsp;
+            NAME
             <Field type="text" id="name" name="name" placeholder="Write name" />
             <ErrorMessage name="name" component="span" />
           </Label>
 
           <Label htmlFor="number">
-            Number&nbsp;
+            Number
             <Field
               type="tel"
               id="number"

@@ -1,12 +1,12 @@
+import { HomeContainer, HomeTitle } from './Home.styled';
+
 export default function Home() {
   return (
-    <div>
-      <h1>
-        Task manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <HomeContainer>
+      <HomeTitle>
+        Congratulations! You are on a page where you can save your contacts. The
+        security of your data will be ensured. Thank you for your trust!
+      </HomeTitle>
+    </HomeContainer>
   );
 }

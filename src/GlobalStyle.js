@@ -9,6 +9,11 @@ export const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url(${require('./img/book.jpg')});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 
   code {
@@ -36,9 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
+  a {
+    text-decoration: none;
   }
 `;

@@ -12,9 +12,13 @@ export const List = () => {
   const handleClickDelete = async contact => {
     try {
       await dispatch(deleteContact(contact.id)).unwrap();
-      toast.success(`${contact.name} has been deleted from your contacts`);
+      toast.success(`${contact.name} has been deleted from your contacts`, {
+        position: 'top-center',
+      });
     } catch (error) {
-      toast.error('Ooops! Something went wrong. Try refreshing the page');
+      toast.error('Ooops! Something went wrong. Try refreshing the page', {
+        position: 'top-center',
+      });
     }
   };
 
